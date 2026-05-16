@@ -733,6 +733,28 @@
         </section>
     </main>
 
+    
+    <!-- Sección de contacto con formulario -->
+    <section id="contact" class="section container">
+        <h2 class="section-title">📬 Contacto</h2>
+        <div class="contact-content">
+            <p>¿Interesado en colaborar o tienes alguna pregunta? Escríbeme.</p>
+
+            <!-- Formulario que envía a FormSubmit -->
+            <form action="https://formspree.io/f/mojbawaj" method="POST" style="display: flex; flex-direction: column; gap: 1rem; max-width: 500px; margin: 2rem auto;">
+                <input type="text" name="nombre" placeholder="Tu nombre" required style="padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border); background: var(--bg-secondary); color: var(--text-primary);">
+                <input type="email" name="email" placeholder="Tu email" required style="padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border); background: var(--bg-secondary); color: var(--text-primary);">
+                <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required style="padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border); background: var(--bg-secondary); color: var(--text-primary);"></textarea>
+                <button type="submit" class="btn btn-primary" style="cursor: pointer;">Enviar mensaje</button>
+            </form>
+
+            <div class="contact-links">
+                <a href="mailto:arancibiagm@gmail.com" class="contact-link">✉️ arancibiagm@gmail.com</a>
+                <a href="https://github.com/MarioAran" target="_blank" class="contact-link">🐙 GitHub</a>
+                <a href="https://linkedin.com/in/mario-german-arancibia-perez" target="_blank" class="contact-link">💼 LinkedIn</a>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="container">
             <p>🚀 “Automatiza todo, aprende continuamente, construye con propósito.” — Mario Arancibia</p>
