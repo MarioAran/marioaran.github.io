@@ -42,7 +42,7 @@
 
         /* Header */
         header {
-            padding: 1.4rem 0;
+            padding: 1.rem 0;
             border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
@@ -528,7 +528,7 @@
         <section id="skills" class="section container">
             <h2 class="section-title">🧰 Herramientas y tecnologías</h2>
             <div style="text-align: center; margin-bottom: 2rem;">
-                <img src="https://skillicons.dev/icons?i=aws,terraform,ansible,docker,python,bash,linux,vscode,github,git" alt="Skills">
+                <img src="https://skillicons.dev/icons?i=aws,terraform,ansible,docker,k8s,python,bash,linux,vscode,github,git" alt="Skills">
             </div>
             <table class="stack-table">
                 <thead>
@@ -546,57 +546,114 @@
             </table>
         </section>
 
-        <!-- Proyectos -->
-        <section id="projects" class="section container">
-            <h2 class="section-title">📁 Proyectos destacados</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon">🏗️</div>
-                    <div class="project-content">
-                        <h3>API Serverless AWS</h3>
-                        <p>API que guarda reportes de costes usando Terraform, AWS Lambda, DynamoDB y Python.</p>
-                        <div class="skill-tags">
-                            <span class="tag">Terraform</span>
-                            <span class="tag">AWS Lambda</span>
-                            <span class="tag">DynamoDB</span>
+        <!-- Proyectos destacados -->
+            <section id="projects" class="section container">
+                <h2 class="section-title">📁 Proyectos destacados</h2>
+                <div class="projects-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+                    
+                    <!-- Card 1: terraform-vagrant -->
+                    <div class="project-card" style="padding: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <span style="font-size: 1.5rem;">🏗️</span>
+                            <h3 style="font-size: 1rem; margin: 0;">terraform-vagrant</h3>
+                        </div>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.75rem;">IaC local con Terraform, Vagrant y Ansible para desplegar WordPress.</p>
+                        <div class="skill-tags" style="margin-bottom: 0.75rem;">
+                            <span class="tag" style="font-size: 0.7rem;">Terraform</span>
+                            <span class="tag" style="font-size: 0.7rem;">Vagrant</span>
+                            <span class="tag" style="font-size: 0.7rem;">Ansible</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/MarioAran/terraform-lambda-dynamodb" target="_blank">→ GitHub</a>
+                            <a href="https://github.com/MarioAran/terraform-vagrant" target="_blank" style="font-size: 0.75rem;">→ GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: terraform-aws-ec2-provisioning -->
+                    <div class="project-card" style="padding: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <span style="font-size: 1.5rem;">☁️</span>
+                            <h3 style="font-size: 1rem; margin: 0;">terraform-aws-ec2</h3>
+                        </div>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Despliegue de EC2 con Terraform y configuración automática con Ansible.</p>
+                        <div class="skill-tags" style="margin-bottom: 0.75rem;">
+                            <span class="tag" style="font-size: 0.7rem;">Terraform</span>
+                            <span class="tag" style="font-size: 0.7rem;">AWS EC2</span>
+                            <span class="tag" style="font-size: 0.7rem;">Ansible</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/MarioAran/terraform-aws-ec2-provisioning" target="_blank" style="font-size: 0.75rem;">→ GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: vagrant-vm -->
+                    <div class="project-card" style="padding: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <span style="font-size: 1.5rem;">🖥️</span>
+                            <h3 style="font-size: 1rem; margin: 0;">vagrant-vm</h3>
+                        </div>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Entornos locales reproducibles con Vagrant y VirtualBox.</p>
+                        <div class="skill-tags" style="margin-bottom: 0.75rem;">
+                            <span class="tag" style="font-size: 0.7rem;">Vagrant</span>
+                            <span class="tag" style="font-size: 0.7rem;">VirtualBox</span>
+                            <span class="tag" style="font-size: 0.7rem;">Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/MarioAran/vagrant-vm" target="_blank" style="font-size: 0.75rem;">→ GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: aws-lambda-dynamodb -->
+                    <div class="project-card" style="padding: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <span style="font-size: 1.5rem;">⚡</span>
+                            <h3 style="font-size: 1rem; margin: 0;">aws-lambda-dynamodb</h3>
+                        </div>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.75rem;">API serverless con Lambda, DynamoDB y Terraform en AWS Free Tier.</p>
+                        <div class="skill-tags" style="margin-bottom: 0.75rem;">
+                            <span class="tag" style="font-size: 0.7rem;">AWS Lambda</span>
+                            <span class="tag" style="font-size: 0.7rem;">DynamoDB</span>
+                            <span class="tag" style="font-size: 0.7rem;">Terraform</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/MarioAran/aws-lambda-dynamodb" target="_blank" style="font-size: 0.75rem;">→ GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: GHCR-Simple-API -->
+                    <div class="project-card" style="padding: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <span style="font-size: 1.5rem;">🔄</span>
+                            <h3 style="font-size: 1rem; margin: 0;">GHCR-Simple-API</h3>
+                        </div>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Pipeline CI/CD con GitHub Actions, GHCR y despliegue en Kubernetes.</p>
+                        <div class="skill-tags" style="margin-bottom: 0.75rem;">
+                            <span class="tag" style="font-size: 0.7rem;">GitHub Actions</span>
+                            <span class="tag" style="font-size: 0.7rem;">GHCR</span>
+                            <span class="tag" style="font-size: 0.7rem;">Kubernetes</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/MarioAran/GHCR-Simple-API" target="_blank" style="font-size: 0.75rem;">→ GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: k8s-wordpress -->
+                    <div class="project-card" style="padding: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <span style="font-size: 1.5rem;">🐳</span>
+                            <h3 style="font-size: 1rem; margin: 0;">k8s-wordpress</h3>
+                        </div>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Migración de WordPress + MySQL a Kubernetes desde Docker Compose.</p>
+                        <div class="skill-tags" style="margin-bottom: 0.75rem;">
+                            <span class="tag" style="font-size: 0.7rem;">Kubernetes</span>
+                            <span class="tag" style="font-size: 0.7rem;">WordPress</span>
+                            <span class="tag" style="font-size: 0.7rem;">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/MarioAran/k8s-wordpress" target="_blank" style="font-size: 0.75rem;">→ GitHub</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-icon" style="background: linear-gradient(135deg, #3fb950 0%, #58a6ff 100%);">🔄</div>
-                    <div class="project-content">
-                        <h3>CI/CD Pipeline</h3>
-                        <p>Pipeline completo con GitHub Actions y self-hosted runner para despliegue en Kubernetes.</p>
-                        <div class="skill-tags">
-                            <span class="tag">GitHub Actions</span>
-                            <span class="tag">Kubernetes</span>
-                            <span class="tag">GHCR</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/MarioAran/GHCR-Simple-API" target="_blank">→ GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon" style="background: linear-gradient(135deg, #d29922 0%, #ff7b72 100%);">🐳</div>
-                    <div class="project-content">
-                        <h3>Terraform + Vagrant</h3>
-                        <p>Despliegue completo de WordPress en VM local usando Terraform, Vagrant y Ansible.</p>
-                        <div class="skill-tags">
-                            <span class="tag">Terraform</span>
-                            <span class="tag">Vagrant</span>
-                            <span class="tag">Ansible</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/MarioAran/terraform-vagrant" target="_blank">→ GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
         <!-- Objetivos -->
         <section id="goals" class="section container">
