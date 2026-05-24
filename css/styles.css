@@ -478,6 +478,11 @@ footer {
         display: none;
     }
 
+ .hero-content  {
+        justify-content: center;
+        margin-right: -50%;
+    }
+
     /* Idioma a la derecha (misma línea que el logo) */
     .lang-selector {
         order: 2;
