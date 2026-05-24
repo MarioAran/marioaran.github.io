@@ -592,54 +592,263 @@ footer {
     }
 }
 
-/* Móviles pequeños (hasta 480px) */
-@media (max-width: 480px) {
-    .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
+/* Móviles (hasta 767px) */
+@media (max-width: 767px) {
+    /* Header y navegación - MEJORADO para iPhone */
+    header {
+        padding: 1rem 0;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        text-align: center;
+    }
+    
+    .logo {
+        display: none;
+    }    
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-links li {
+        margin: 0;
+    }
+    
+    .nav-links li a {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.6rem;
+        display: inline-block;
+        white-space: nowrap;
+    }
+    
+    .lang-selector {
+        margin-left: 0;
+        margin-top: -10rem;
+    }
+    
+    .lang-btn {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.75rem;
+    }
+    
+    /* Hero section */
+    .hero {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+    }
+    
+    .hero-content {
+        text-align: center;
     }
     
     .hero-content h1 {
         font-size: 1.75rem;
     }
     
+    .hero-content p {
+        font-size: 0.85rem;
+    }
+    
+    .hero-content div {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 180px;
+        text-align: center;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Terminal */
+    .terminal {
+        width: 100%;
+        max-width: 100%;
+        font-size: 0.75rem;
+    }
+    
+    .terminal-body {
+        padding: 1rem;
+    }
+    
     .terminal-line {
-        font-size: 0.65rem;
+        font-size: 0.7rem;
+    }
+    
+    /* Grids */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
     
     .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .skill-card {
+        padding: 0.75rem;
+    }
+    
+    .skill-card h3 {
+        font-size: 0.9rem;
+    }
+    
+    .goals-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .certificate-badge {
-        width: 100%;
-        min-width: auto;
-    }
-    
-    .stack-table,
-    .stack-table tbody,
-    .stack-table tr,
-    .stack-table th,
-    .stack-table td {
-        display: block;
-    }
-    
-    .stack-table tr {
-        margin-bottom: 1rem;
-        border: 1px solid var(--border);
-        border-radius: 8px;
-    }
-    
-    .stack-table th {
-        text-align: left;
-        background: var(--bg-secondary);
+        gap: 0.75rem;
     }
     
     .goal-item {
+        padding: 0.75rem;
         font-size: 0.85rem;
     }
+    
+    /* Sección de dos columnas (Lecturas + Timeline) */
+    .section .grid-2cols,
+    .section > div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Timeline */
+    .section > div > div > div[style*="padding-left: 2rem"] {
+        padding-left: 1.2rem;
+    }
+    
+    .section > div > div > div[style*="position: relative"] h3 {
+        font-size: 0.85rem;
+    }
+    
+    .section > div > div > div[style*="position: relative"] p {
+        font-size: 0.75rem;
+    }
+    
+    /* Tablas */
+    .stack-table {
+        font-size: 0.75rem;
+    }
+    
+    .stack-table th,
+    .stack-table td {
+        padding: 0.5rem;
+    }
+    
+    /* Certificaciones */
+    .certificate-badge {
+        width: calc(50% - 0.75rem);
+        min-width: 110px;
+        padding: 0.75rem;
+    }
+    
+    .certificate-badge img {
+        width: 50px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .certificate-badge h4 {
+        font-size: 0.75rem;
+    }
+    
+    .certificate-badge p {
+        font-size: 0.7rem;
+    }
+    
+    .certificate-badge .tag {
+        font-size: 0.65rem;
+    }
+    
+    /* Formulario de contacto */
+    .contact-content {
+        padding: 0 0.5rem;
+    }
+    
+    .contact-content form {
+        margin: 1rem 0;
+        width: 100%;
+    }
+    
+    .contact-content input,
+    .contact-content textarea {
+        font-size: 0.85rem;
+        padding: 0.6rem;
+    }
+    
+    .contact-links {
+        flex-direction: column;
+        gap: 0.6rem;
+        align-items: center;
+    }
+    
+    .contact-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 1.5rem 0;
+    }
+    
+    footer .container p {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+    
+    /* Ajustes generales */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .section {
+        padding: 1.5rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .section-title::before {
+        width: 30px;
+    }
+    
+    .project-card {
+        padding: 0.75rem;
+    }
+    
+    .project-card h3 {
+        font-size: 0.9rem;
+    }
+    
+    .project-card p {
+        font-size: 0.7rem;
+    }
+    
+    .tag {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.5rem;
+    }
 }
-
 /* Ajustes para tablets en horizontal (1024px - 1200px) */
 @media (min-width: 1025px) and (max-width: 1200px) {
     .projects-grid {
