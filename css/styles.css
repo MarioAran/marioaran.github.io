@@ -50,13 +50,15 @@ nav {
 .logo {
     font-family: 'JetBrains Mono', monospace;
     font-size: 1.5rem;
+    padding-right: 18em;
+
     color: var(--accent);
     text-decoration: none;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.2rem;
     list-style: none;
 }
 
