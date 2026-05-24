@@ -30,7 +30,6 @@ body {
     padding: 0 2rem;
 }
 
-/* Header - Grid de 3 columnas */
 header {
     padding: 1.2rem 0;
     border-bottom: 1px solid var(--border);
@@ -47,7 +46,6 @@ nav {
     gap: 1rem;
 }
 
-/* Logo - columna 1 (izquierda) */
 .logo {
     font-family: 'JetBrains Mono', monospace;
     font-size: 1.5rem;
@@ -56,7 +54,6 @@ nav {
     justify-self: start;
 }
 
-/* Nav links - columna 2 (centro) */
 .nav-links {
     display: flex;
     gap: 1.2rem;
@@ -74,7 +71,6 @@ nav {
     color: var(--accent);
 }
 
-/* Selector de idioma - columna 3 (derecha) */
 .lang-selector {
     justify-self: end;
 }
@@ -101,7 +97,6 @@ nav {
     color: white;
 }
 
-/* Hero */
 .hero {
     padding: 4rem 0;
     display: grid;
@@ -126,7 +121,6 @@ nav {
     margin-bottom: 2rem;
 }
 
-/* Terminal */
 .terminal {
     background: var(--bg-secondary);
     border: 1px solid var(--border);
@@ -178,7 +172,6 @@ nav {
     50% { opacity: 0; }
 }
 
-/* Sections */
 .section {
     padding: 5rem 0;
     border-top: 1px solid var(--border);
@@ -200,7 +193,6 @@ nav {
     border-radius: 2px;
 }
 
-/* Skills Grid */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -240,7 +232,6 @@ nav {
     color: var(--text-secondary);
 }
 
-/* Stack Table */
 .stack-table {
     background: var(--bg-secondary);
     border: 1px solid var(--border);
@@ -265,7 +256,6 @@ nav {
     border-bottom: none;
 }
 
-/* Projects Grid */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -294,7 +284,6 @@ nav {
     text-decoration: underline;
 }
 
-/* Goals */
 .goals-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -315,7 +304,6 @@ nav {
     border-color: var(--accent-green);
 }
 
-/* Certificate Badge */
 .certificate-badge {
     display: inline-block;
     background: var(--bg-card);
@@ -336,7 +324,6 @@ nav {
     margin-bottom: 1rem;
 }
 
-/* Contact */
 .contact-content {
     text-align: center;
     max-width: 600px;
@@ -372,7 +359,6 @@ nav {
     color: var(--accent);
 }
 
-/* Buttons */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -408,11 +394,6 @@ footer {
     color: var(--text-secondary);
 }
 
-/* ============================================ */
-/* RESPONSIVE DESIGN - MEDIA QUERIES            */
-/* ============================================ */
-
-/* Tablets y dispositivos medianos (768px - 1024px) */
 @media (max-width: 1024px) {
     .container {
         padding-left: 2rem;
@@ -457,7 +438,6 @@ footer {
     }
 }
 
-
 @media (max-width: 767px) {
     nav {
         display: flex;
@@ -467,23 +447,21 @@ footer {
         gap: 0.5rem;
     }
     
-    /* Logo a la izquierda */
     .logo {
         order: 1;
         font-size: 1rem;
         flex: 1;
     }
 
-    .terminal{
+    .terminal {
         display: none;
     }
 
- .hero-content  {
+    .hero-content {
         justify-content: center;
         margin-right: -50%;
     }
-
-    /* Idioma a la derecha (misma línea que el logo) */
+    
     .lang-selector {
         order: 2;
         margin: 0;
@@ -494,9 +472,6 @@ footer {
         font-size: 0.7rem;
     }
     
-    
-
-    /* Nav links - que ocupen toda la línea debajo */
     .nav-links {
         order: 3;
         width: 100%;
@@ -512,11 +487,8 @@ footer {
         padding: 0.3rem 0.5rem;
         white-space: nowrap;
     }
-    
-    /* El resto de tu CSS móvil... */
 }
 
-/* Ajustes para tablets en horizontal (1024px - 1200px) */
 @media (min-width: 1025px) and (max-width: 1200px) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -527,7 +499,6 @@ footer {
     }
 }
 
-/* Mejora de experiencia en hover para táctil */
 @media (hover: none) and (pointer: coarse) {
     .project-card:hover,
     .skill-card:hover,
@@ -538,11 +509,6 @@ footer {
     }
 }
 
-/* ============================================ */
-/* RESPONSIVE PARA SKILLICONS ICONS             */
-/* ============================================ */
-
-/* Envoltura responsiva para skillicons */
 .skills-grid + div {
     text-align: center;
     overflow-x: auto;
@@ -556,7 +522,6 @@ footer {
     min-width: 300px;
 }
 
-/* Para la tabla de herramientas */
 .stack-table {
     overflow-x: auto;
     display: block;
